@@ -1,4 +1,10 @@
 function fibs(n) {
+  if (n === 0) {
+    return [];
+  } else if (n === 1) {
+    return [0];
+  }
+
   const sequence = [0, 1];
 
   for (let i = 2; i < n; i++) {
@@ -9,7 +15,9 @@ function fibs(n) {
 }
 
 function fibsRec(n) {
-  if (n === 1) {
+  if (n === 0) {
+    return [];
+  } else if (n === 1) {
     return [0];
   } else if (n === 2) {
     return [0, 1];
@@ -18,5 +26,6 @@ function fibsRec(n) {
   }
 }
 
-console.log('Iterator:', fibs(8));
-console.log('Recursion:', fibsRec(8));
+const number = 8;
+console.log('Iterator:', fibs(number));
+console.log('Recursion:', fibsRec(number));
